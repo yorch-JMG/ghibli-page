@@ -17,7 +17,7 @@ export const MovieCard = ({
   return (
     <Link href="/">
       <div className="hover:bg-gray-200 p-3 w-fit rounded-sm cursor-pointer">
-        <Image src={image} height={400} width={280} />
+        <Image src={image} height={400} width={280} loading="lazy" />
         <h1 className="text-lg font-bold">{title}</h1>
         <h4>{original_title}</h4>
         <h4 className="italic">{release_date}</h4>
