@@ -25,7 +25,7 @@ export const MovieSection: React.FC = () => {
   }, [loadMovies]);
 
   return (
-    <div className="px-3 max-w-4xl mx-auto">
+    <div className="px-3 mt-5 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold">Movie section</h1>
       <h4>This is a fanmade ghibli encyclopedia!</h4>
       {isLoading && movies ? <LoadingSpinner /> : <LoadedMovies movies={movies} />}
