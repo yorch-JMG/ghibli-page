@@ -8,9 +8,19 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
   if (film) {
     return (
       <div className="px-3 mt-5 max-w-6xl mx-auto">
+        <div>
+          <h1 className="text-3xl font-bold pb-6">{film.title}</h1>
+					<div className="block md:hidden w-full md:w-2/3 md:h-fit md:my-auto pb-3 md:pb-0">
+            <Image
+              src={film.image}
+              layout="responsive"
+              height={300}
+              width={200}
+            />
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row w-full h-fit">
           <div className="w-full md:w-1/2 pb-3 md:pb-0 md:pr-3 space-y-1">
-            <h1 className="text-3xl font-bold pb-6">{film.title}</h1>
             <h4 className="font-bold">Original title:</h4>
             <p>{film.original_title}</p>
             <h4 className="font-bold">Original title romanised:</h4>
@@ -37,7 +47,7 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
               />
             </div>
           </div>
-					<div className="w-full md:w-2/3 md:h-fit md:my-auto">
+					<div className="hidden w-full md:block md:w-2/3 md:h-fit md:my-auto">
             <Image
               src={film.image}
               layout="responsive"
