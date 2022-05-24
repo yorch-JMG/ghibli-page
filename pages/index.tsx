@@ -1,14 +1,14 @@
 import {NextPage} from 'next';
-import { Footer } from '../components/Footer';
+import {Footer} from '../components/Footer';
 import {Header} from '../components/Header';
-import { MovieSection } from '../components/MoviesSection';
+import {MovieSection} from '../components/MoviesSection';
 
 const Home: NextPage = () => {
   return (
     <div>
       <Header />
-			<MovieSection/>
-			<Footer/>
+      <MovieSection />
+      <Footer />
     </div>
   );
 };

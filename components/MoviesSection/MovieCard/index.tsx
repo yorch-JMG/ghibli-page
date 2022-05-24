@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export interface MovieCardProps {
+id: string;
   title: string;
   original_title: string;
   image: string;
@@ -9,13 +10,14 @@ export interface MovieCardProps {
 }
 
 export const MovieCard = ({
+		id,
   title,
   original_title,
   image,
   release_date,
 }: MovieCardProps) => {
   return (
-    <Link href="/">
+    <Link href={'/'+id}>
       <div className="hover:bg-gray-200 p-3 w-fit rounded-sm cursor-pointer">
         <Image src={image} height={400} width={280} loading="lazy" />
         <h1 className="text-lg font-bold">{title}</h1>
