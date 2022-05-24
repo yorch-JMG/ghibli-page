@@ -5,12 +5,16 @@ import {HomeIcon, SearchIcon} from '@heroicons/react/outline';
 export const Header: React.FC = () => {
   return (
     <header className="flex flex-col sm:flex-row mt-5 justify-between items-center align-center sticky top-0 z-50 bg-white shadow-sm">
-		<div className="flex flex-grow justify-evenly max-w-2xl mt-5 md:mt-0 lg:mt-0">
+      <div className="flex flex-grow justify-evenly max-w-2xl mt-5 md:mt-0 lg:mt-0">
         <div className="flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-gray">
-          <HomeIcon className="h-8" />
+          <Link href="/">
+            <HomeIcon className="h-8" />
+          </Link>
         </div>
         <div className="flex flex-col items-center cursor-pointer group w-12 sm:w-20 hover:text-gray">
-          <SearchIcon className="h-8" />
+          <Link href="/">
+            <SearchIcon className="h-8" />
+          </Link>
         </div>
       </div>
       <Link href="/">
