@@ -28,7 +28,7 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
             <h4 className="font-bold">Release date:</h4>
             <p>{film.release_date}</p>
             <h4 className="font-bold">Running time:</h4>
-            <p>{film.running_time}</p>
+            <p>{film.running_time} minutes</p>
             <h4 className="font-bold">Director:</h4>
             <p>{film.director}</p>
             <h4 className="font-bold">Producer:</h4>
