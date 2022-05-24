@@ -1,10 +1,16 @@
 import {MovieCard} from '../MovieCard';
 
-export const LoadedMovies = ({movies}: any) => {
+export const LoadedMovies = ({movies, inputText}: any) => {
   if (movies) {
+    const filteredMovies = movies.filter((movie: any) => {
+      if (inputText === '') return movie;
+      else {
+        return movie.title.toLowerCase().includes(inputText);
+      }
+    });
     return (
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
-        {movies.map((movie: any) => {
+        {filteredMovies.map((movie: any) => {
           return (
             <div key={movie.id}>
               <MovieCard
