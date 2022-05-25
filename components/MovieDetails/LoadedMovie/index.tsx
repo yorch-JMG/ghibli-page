@@ -1,4 +1,3 @@
-import { Skeleton, SkeletonCircle, SkeletonText } from '@chakra-ui/skeleton'
 import Image from 'next/image';
 
 type LoadedMovieProp = {
@@ -6,7 +5,7 @@ type LoadedMovieProp = {
 };
 
 export const LoadedMovie = ({film}: LoadedMovieProp) => {
-  if (film) {
+  if (film.image) {
     return (
       <div className="px-3 mt-5 max-w-6xl mx-auto">
         <div>
