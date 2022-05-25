@@ -10,13 +10,13 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
       <div className="px-3 mt-5 max-w-6xl mx-auto">
         <div>
           <h1 className="text-3xl font-bold pb-6">{film.title}</h1>
-					<div className="block md:hidden w-full md:w-2/3 md:h-fit md:my-auto pb-3 md:pb-0">
+          <div className="block md:hidden w-full md:w-2/3 md:h-fit md:my-auto pb-3 md:pb-0">
             <Image
               src={film.image}
               layout="responsive"
               height={300}
               width={200}
-							loading='eager'
+              loading="eager"
             />
           </div>
         </div>
@@ -45,11 +45,11 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
                 layout="responsive"
                 height={300}
                 width={600}
-								loading='eager'
+                loading="eager"
               />
             </div>
           </div>
-					<div className="hidden w-full md:block md:w-2/3 md:h-fit md:my-auto">
+          <div className="hidden w-full md:block md:w-2/3 md:h-fit md:my-auto">
             <Image
               src={film.image}
               layout="responsive"
@@ -61,5 +61,15 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
       </div>
     );
   }
-  return <div>movie undefined</div>;
+  return (
+    <div className="max-w-3xl mx-auto mt-5 px-3">
+      <h1 className="font-bold text-2xl">No movie found, go back!</h1>
+      <Image
+        className="mx-auto"
+        src='/errorImage.png'
+        width={500}
+        height={500}
+      />
+    </div>
+  );
 };

@@ -8,7 +8,7 @@ const nextConfig = {
       'static.wikia.nocookie.net',
       'themoviedb.org',
       'image.tmdb.org',
-			'www.themoviedb.org'
+			'www.themoviedb.org',
     ],
   },
   reactStrictMode: true,
