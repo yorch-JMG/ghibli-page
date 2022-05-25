@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {getAllMovies} from '../../data-functions/GetAllMovies';
-import {LoadingSpinner} from '../LoadingSpinner';
+import { LoadingMovies } from '../LoadingMovies';
 import {LoadedMovies} from './LoadedMovies';
 export interface MovieCardProps {
   id: string;
@@ -30,7 +30,7 @@ export const MovieSection: React.FC = () => {
   }, [loadMovies]);
 
   return (
-    <div className="px-3 mt-5 max-w-4xl mx-auto">
+    <div className="px-3 mt-5 max-w-4xl mx-auto h-fit">
       <h1 className="text-2xl font-bold">Movie section</h1>
       <h4>This is a fanmade ghibli encyclopedia!</h4>
       <input
@@ -40,7 +40,7 @@ export const MovieSection: React.FC = () => {
         className="shadow appearance-none border rounded-sm w-1/2 py-2 px-3 my-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       {isLoading && movies ? (
-        <LoadingSpinner />
+        <LoadingMovies />
       ) : (
         <LoadedMovies movies={movies} inputText={inputText}/>
       )}

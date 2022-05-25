@@ -7,6 +7,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				poppins: ["Poppins", "sans-serif"]
+			},
+			height: {
+				'movies-section-spacing': '300rem'
 			}
 		},
   },

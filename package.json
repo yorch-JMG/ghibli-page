@@ -9,10 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.1.2",
+    "@chakra-ui/skeleton": "^2.0.4",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
     "@heroicons/react": "^1.0.6",
+    "@types/shortid": "^0.0.29",
+    "framer-motion": "^6",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "@types/node": "17.0.35",

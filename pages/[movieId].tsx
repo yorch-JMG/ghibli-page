@@ -5,7 +5,7 @@ import {Header} from '../components/Header';
 import {useState, useEffect} from 'react';
 import {getMovieById} from '../data-functions/GetMovieById';
 import {LoadedMovie} from '../components/MovieDetails/LoadedMovie';
-import {LoadingSpinner} from '../components/LoadingSpinner';
+import { LoadingMovie } from '../components/LoadingMovieDetails';
 
 const MovieDetails: NextPage = () => {
   const router = useRouter();
@@ -28,7 +28,7 @@ const MovieDetails: NextPage = () => {
   return (
     <div>
       <Header />
-			{isLoading ? <LoadingSpinner /> : <LoadedMovie film={movie} />} 
+			{isLoading ? <LoadingMovie/> : <LoadedMovie film={movie} />} 
 
       <Footer />
     </div>
