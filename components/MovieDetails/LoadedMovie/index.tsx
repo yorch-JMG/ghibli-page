@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Head from 'next/head';
 
 type LoadedMovieProp = {
   film: any;
@@ -8,6 +9,10 @@ export const LoadedMovie = ({film}: LoadedMovieProp) => {
   if (film.image) {
     return (
       <div className="px-3 mt-5 max-w-6xl mx-auto">
+				<Head>
+					<title>{film.title}</title>
+					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				</Head>
         <div>
           <h1 className="text-3xl font-bold pb-6">{film.title}</h1>
           <div className="block md:hidden w-full md:w-2/3 md:h-fit md:my-auto pb-3 md:pb-0">
